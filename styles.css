@@ -1,0 +1,948 @@
+/* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.flag-br, .flag-us, .flag-es {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.flag-br {
+  background-image: url('image/bandeiras/brasil.png');
+}
+
+.flag-us {
+  background-image: url('image/bandeiras/eua.png');
+}
+
+.flag-es {
+  background-image: url('image/bandeiras/espanha.png');
+}
+
+.flag-br:hover, .flag-us:hover, .flag-es:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  padding: 20px;
+}
+
+/* Estilo para o card */
+.card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0054fc4e;
+  border-radius: 9px;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 23px;
+  max-width: 900px;
+  margin: 20px auto;
+  align-items: center;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.left-side {
+  flex: 5;
+}
+
+.right-side {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo {
+  border-radius: 9px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2) rotateZ(5deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 55px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin: 40px;
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Efeitos hover nas tecnologias */
+.tech-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tech-row img, .tech-row svg {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.tech-row img:hover, .tech-row svg:hover {
+  transform: translateY(-10px) scale(1.1);
+  background-color: rgba(0, 123, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.2);
+}
+
+/* Animação sequencial para os ícones de tecnologia */
+.tech-row img:nth-child(1), .tech-row svg:nth-child(1) { animation-delay: 0.1s; }
+.tech-row img:nth-child(2), .tech-row svg:nth-child(2) { animation-delay: 0.2s; }
+.tech-row img:nth-child(3), .tech-row svg:nth-child(3) { animation-delay: 0.3s; }
+.tech-row img:nth-child(4), .tech-row svg:nth-child(4) { animation-delay: 0.4s; }
+.tech-row img:nth-child(5), .tech-row svg:nth-child(5) { animation-delay: 0.5s; }
+.tech-row img:nth-child(6), .tech-row svg:nth-child(6) { animation-delay: 0.6s; }
+.tech-row img:nth-child(7), .tech-row svg:nth-child(7) { animation-delay: 0.7s; }
+.tech-row img:nth-child(8), .tech-row svg:nth-child(8) { animation-delay: 0.8s; }
+.tech-row img:nth-child(9), .tech-row svg:nth-child(9) { animation-delay: 0.9s; }
+.tech-row img:nth-child(10), .tech-row svg:nth-child(10) { animation-delay: 1.0s; }
+.tech-row img:nth-child(11), .tech-row svg:nth-child(11) { animation-delay: 1.1s; }
+.tech-row img:nth-child(12), .tech-row svg:nth-child(12) { animation-delay: 1.2s; }
+.tech-row img:nth-child(13), .tech-row svg:nth-child(13) { animation-delay: 1.3s; }
+
+.tech-row img, .tech-row svg {
+  animation: bounceIn 0.6s ease-out both;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-5px);
+  }
+  70% {
+    transform: scale(0.9) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+#description {
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 25px;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+#pdf-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+#pdf-button:hover {
+  background-color: #2600fe;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+        display: none !important; /* Use !important para garantir que sobrescreva outros estilos */
+    }
+
+/* Estilos para projetos com hover effects */
+.project {
+    max-width: 600px; /* Exemplo: Limita a largura de cada bloco de projeto */
+    margin-left: auto; /* Centraliza o bloco se ele tiver max-width */
+    margin-right: auto; /* Centraliza o bloco se ele tiver max-width */
+    margin-bottom: 30px; /* Espaço entre os blocos de projeto */
+    padding: 20px; /* Espaço interno */
+    background-color: #fff; /* Fundo branco, se necessário */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Essencial para conter a imagem flutuante e garantir que o background/border envolvam tudo */
+
+    /* --- Adicionado para a animação de entrada --- */
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Começa ligeiramente abaixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Define a transição */
+    /* --- Fim da adição para animação --- */
+}
+
+/* --- Adicionado: Estado final da animação quando a classe is-visible é adicionada pelo JS --- */
+.project.is-visible {
+    opacity: 1; /* Torna-se visível */
+    transform: translateY(0); /* Volta para a posição original */
+}
+/* --- Fim da adição --- */
+
+/* --- Adicionado: Estilo para esconder projetos filtrados --- */
+.project.hidden {
+    display: none !important; /* Garante que o elemento seja completamente removido do layout */
+}
+/* --- Fim da adição --- */
+
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project img {
+    /* MODIFICADO: Faz a imagem flutuar para a esquerda */
+    float: left;
+    /* ADICIONADO: Adiciona espaço à direita da imagem para separar do texto */
+    margin-right: 20px; /* Ajuste este valor se precisar de mais ou menos espaço */
+    /* MODIFICADO: Define um tamanho para a imagem flutuante */
+    max-width: 150px; /* Ajuste este valor para o tamanho desejado da imagem */
+    width: auto; /* Permite que a imagem se ajuste ao max-width */
+
+    height: auto; /* Mantém a proporção original da imagem */
+    display: block; /* Mantido: Ajuda com o float */
+    margin-bottom: 10px; /* Ajustado: Espaço abaixo da imagem, útil se o texto for curto */
+    border-radius: 8px; /* Mantido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Mantido */
+    object-fit: cover; /* Mantido */
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+/* ADICIONADOS: Estilos para o título e a descrição */
+/* Assumindo que o título é um h3 e a descrição um p diretamente dentro de .project */
+.project h3 {
+    font-size: 1.5em; /* Tamanho maior para o título (ajuste conforme necessário) */
+    font-weight: bold; /* Título em negrito */
+    margin-top: 0; /* Remove margem superior padrão para que comece no topo do espaço */
+    margin-bottom: 5px; /* Espaço entre o título e a descrição */
+    /* Mantenha a cor e outros estilos de texto que você já tenha */
+    /* color: #333; Exemplo de cor */
+}
+
+.project p {
+    font-size: 1em; /* Tamanho da fonte para a descrição (ajuste conforme necessário) */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    margin-top: 0; /* Remove margem superior padrão para que comece logo após o título */
+    margin-bottom: 15px; /* Espaço abaixo da descrição */
+    /* Mantenha a cor e outros estilos de texto que você já tenha */
+    /* color: #555; Exemplo de cor */
+}
+
+
+.project button {
+    /* Seus estilos de botão existentes */
+    width: 30%; /* Mantido do seu CSS original */
+    margin-bottom: 10px; /* Mantido do seu CSS original */
+    /* Opcional: Adicionar clear para garantir que os botões fiquem abaixo da imagem flutuante */
+    /* clear: left; */
+    /* Se clear for usado, talvez precise ajustar o display dos botões */
+    /* display: block; */
+    /* width: 100%; */
+    /* Para manter seus estilos originais de botão, vamos tentar sem clear primeiro */
+    /* Eles devem fluir após o parágrafo */
+}
+
+/* Responsividade: Em telas menores, remova o float para empilhar os elementos novamente */
+@media (max-width: 768px) { /* Ajuste este breakpoint conforme necessário */
+    .project img {
+        float: none; /* Remove o float */
+        margin-right: 0; /* Remove o espaço à direita */
+        margin-bottom: 15px; /* Adiciona espaço abaixo da imagem quando empilhada */
+        max-width: 100%; /* Permite que a imagem ocupe a largura total */
+        width: 100%; /* Garante que ocupe a largura total */
+        display: block; /* Garante que a imagem ocupe sua própria linha */
+        /* Centralizar a imagem se o container for mais largo que a imagem */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project h3,
+    .project p {
+        /* Opcional: Centraliza o texto em telas menores */
+        text-align: center;
+    }
+
+    .project button {
+        /* Opcional: Faz os botões ocuparem a largura total e se empilharem em telas menores */
+        width: 100%;
+        margin-right: 0; /* Remove espaço entre botões se eles estavam em linha */
+        display: block; /* Garante que cada botão fique em sua própria linha */
+    }
+}
+
+#tech-filter-section {
+    text-align: center; /* Centraliza o texto e elementos inline/inline-block */
+    padding: 20px; /* Adiciona um pouco de espaço interno */
+}
+
+.tech-options-container {
+    display: flex; /* Usa Flexbox para alinhar os botões */
+    justify-content: center; /* Centraliza os itens (botões) horizontalmente */
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha em telas menores */
+    gap: 10px; /* Adiciona espaço entre os botões */
+    margin-top: 15px; /* Espaço entre o título e os botões */
+}
+
+
+/* Estilos para o parágrafo de status do filtro de tecnologia */
+#tech-filter-status {
+    font-size: 0.9em; /* Tamanho de fonte menor */
+    color: #888; /* Cor cinza discreta */
+    margin-top: 10px; /* Espaço acima */
+    margin-bottom: 10px; /* Espaço abaixo */
+    text-align: center; /* Centraliza o texto */
+    opacity: 1; /* Começa visível (controlado por JS) */
+    transition: opacity 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none !important; /* Força a ocultação */
+}
+
+/* Adicione esta regra se quiser uma animação de fade-in */
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.is-visible { /* Usa a classe is-visible já usada para animações */
+    opacity: 1;
+}
+
+
+
+
+
+
+/* SLIDER DE CERTIFICADOS */
+.slider {
+  position: relative;
+  max-width: 700px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #d21c1c;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slider-item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slider-item.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.slider-item.prev {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+/* Navegação do slider */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.slider-nav:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-prev {
+  left: 15px;
+}
+
+.slider-next {
+  right: 15px;
+}
+
+/* Indicadores do slider */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.slider-dot.active {
+  background-color: #007bff;
+  transform: scale(1.3);
+  border-color: #0056b3;
+}
+
+.slider-dot:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Progresso automático do slider */
+.slider-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #007bff;
+  transition: width 0.1s ease;
+  z-index: 5;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Botão voltar ao topo */
+#back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px; /* Tamanho  */
+  height: 40px; /* Tamanho  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff; /* Cor mais chamativa (laranja vibrante) */
+  color: #fff;
+  font-size: 22px; /* Tamanho da fonte ajustado */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease; /* Transição suave para aparecer/sumir */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+/* Keyframes para a animação de flutuação */
+@keyframes float-cycle {
+    0%, 100% { transform: translateY(0); } /* Posição base */
+    25% { transform: translateY(-5px); } /* Move ligeiramente para cima */
+    75% { transform: translateY(5px); }  /* Move ligeiramente para baixo */
+}
+
+#back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  /* Aplica a animação quando o botão está visível */
+  animation: float-cycle 2s ease-in-out infinite; /* Animação: nome duração timing-function (suave) repetição (infinita) */
+}
+
+#back-to-top-btn:hover {
+  background-color: #e64a19; /* Cor mais escura no hover */
+  /* Removido o transform: translateY(-3px) do hover para não interferir com a animação */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra maior no hover */
+}
+
+
+
+/* Responsividade: Telas médias (600px-1024px) */
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tech-row {
+    flex-wrap: wrap;
+  }
+
+  .profile-photo {
+    max-width: 80%;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .slider-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .slider {
+    max-width: 90%;
+  }
+
+  .slider-container {
+    min-height: 350px;
+  }
+}
+
+/* Responsividade: Telas pequenas (até 600px) */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .profile-photo {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tech-row img, .tech-row svg {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin: 20px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .slider-nav {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .slider {
+    max-width: 95%;
+    margin: 10px auto;
+  }
+
+  .slider-container {
+    min-height: 280px;
+  }
+
+  .slider-item {
+    padding: 10px;
+  }
+}
+
+/* Container wrapper para posicionar botões externos */
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  position: relative;
+}
+
+/* Botões de navegação externos */
+.slider-nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  flex-shrink: 0; /* Impede que os botões encolham */
+}
+
+.slider-nav:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.slider-nav:active {
+  transform: scale(0.95);
+}
+
+/* O slider agora não precisa de position relative para os botões */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/* Responsivo - em telas menores, botões ficam menores */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    gap: 10px;
+    max-width: 95%;
+  }
+  
+  .slider-nav {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  .slider {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-wrapper {
+    gap: 8px;
+  }
+  
+  .slider-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .slider {
+    min-height: 280px;
+  }
+}
+
+/* Em telas muito pequenas, empilha verticalmente */
+@media (max-width: 480px) {
+  .slider-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .slider-nav {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Container para botões na parte inferior */
+  .slider-wrapper::after {
+    content: '';
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    order: 3;
+  }
+}
+
+/* Container para cada tecnologia */
+.tech-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Efeito hover no item */
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Tooltip */
+.tech-item::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Seta do tooltip */
+.tech-item::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  margin-bottom: 2px;
+}
+
+/* Mostrar tooltip no hover */
+.tech-item:hover::before,
+.tech-item:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ajustar as imagens dentro do tech-item */
+.tech-item img,
+.tech-item svg {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Responsivo - ajustar tooltip em telas pequenas */
+@media (max-width: 768px) {
+  .tech-item::before {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  
+  .tech-item::after {
+    border-width: 5px;
+  }
+}
+
+/* Para telas muito pequenas, pode desabilitar os tooltips */
+@media (max-width: 480px) {
+  .tech-item::before,
+  .tech-item::after {
+    display: none;
+  }
+  
+  /* Ou usar um estilo alternativo mais simples */
+  .tech-item:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+/* mensagem de atenção */
+/* Estilo para a mensagem de atenção */
+.warning-message {
+    text-align: center; /* Centraliza o texto */
+    color: #d9534f; /* Cor vermelha para destaque (pode ajustar) */
+    font-size: 1.1em; /* Tamanho da fonte um pouco maior */
+    font-weight: bold; /* Texto em negrito */
+    margin-top: 10px; /* Espaço acima */
+    margin-bottom: 20px; /* Espaço abaixo do texto e acima do card */
+    padding: 10px; /* Preenchimento interno */
+    background-color: #fcf8e3; /* Fundo suave para a caixa de atenção */
+    border: 1px solid #faebcc; /* Borda sutil */
+    border-radius: 5px; /* Cantos arredondados */
+    max-width: 900px; /* Limita a largura como o card */
+    margin-left: auto; /* Centraliza o bloco */
+    margin-right: auto; /* Centraliza o bloco */
+    animation: fadeIn 0.8s ease-out; /* Opcional: animação de entrada */
+}
+
+/* Adicione a keyframe fadeIn se ainda não tiver */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Ajuste para telas menores, se necessário */
+@media (max-width: 768px) {
+    .warning-message {
+        font-size: 1em;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
